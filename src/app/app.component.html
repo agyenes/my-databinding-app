@@ -1,5 +1,7 @@
 <div class="container">
-  <app-game-control></app-game-control>
+  <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+  <app-odd *ngFor="let number of oddNumbers" [number]="number"></app-odd>
+  <app-even *ngFor="let number of evenNumbers" [number]="number"></app-even>
   <!-- <app-cockpit 
     (srvCreated)="onServerAdded($event)"
     (blueprintCreated)="onBlueprintAdded($event)"
